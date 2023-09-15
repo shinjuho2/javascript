@@ -70,3 +70,7 @@
 .slide-box img {
     width: 100%;
 }
+
+.agree {
+    display: none;
+}
