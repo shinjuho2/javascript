@@ -90,7 +90,7 @@
 
   <script>
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       console.log(window.scrollY);
     });
 
@@ -109,6 +109,19 @@
           count++;
         }
       });
+    });
+
+  </script>
+
+
+  <script>
+
+    $(window).on('scroll', function () {
+      if (window.scrollY > 100) {
+        $('.navbar-brand').css('font-size', '20px')
+      } else {
+        $('.navbar-brand').css('font-size', '30px')
+      }
     });
 
   </script>
@@ -180,7 +193,7 @@
 
   </script>
 
-<div style="height: 1000px;"> </div>
+  <div style="height: 1000px;"> </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
@@ -212,14 +225,14 @@
 <script>
 
   var now = 1;
-  
-  $('.next').on('click', function() {
-    if (now == 1){
+
+  $('.next').on('click', function () {
+    if (now == 1) {
       $('.slide-container').css('transform', 'translateX(-100vw)');
-      now ++;
+      now++;
     } else if (now == 2) {
       $('.slide-container').css('transform', 'translateX(-200vw)');
-      now ++;
+      now++;
     } else if (now == 3) {
       $('.slide-container').css('transform', 'translateX(0vw)');
       now = now - 2;
@@ -227,18 +240,18 @@
   })
 
 
-  
 
 
-  $('.slide-1').on('click', function() {
+
+  $('.slide-1').on('click', function () {
     $('.slide-container').css('transform', 'translateX(0vw)');
   })
-  
-  $('.slide-2').on('click', function() {
+
+  $('.slide-2').on('click', function () {
     $('.slide-container').css('transform', 'translateX(-100vw)');
   })
-  
-  $('.slide-3').on('click', function() {
+
+  $('.slide-3').on('click', function () {
     $('.slide-container').css('transform', 'translateX(-200vw)');
   })
 
