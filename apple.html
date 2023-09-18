@@ -17,7 +17,7 @@
 
 <body>
 
-  <!--<div class="black-bg show-modal">
+  <div class="black-bg show-modal">
     <div class="white-bg">
       <h4>로그인하세요</h4>
       <form action="success.html">
@@ -31,7 +31,17 @@
         <button type="button" class="btn btn-danger" id="close">닫기</button>
       </form>
     </div>
-  </div>-->
+  </div>
+
+  <script>
+
+document.querySelector('.black-bg').addEventListener('click', function(e){
+  if (e.target == document.querySelector('.black-bg')) {
+    $('.black-bg').hide('show-modal');
+  }
+})
+
+  </script>
 
   <script>
 
@@ -60,7 +70,7 @@
 
   </script>
 
-  <!--<script>
+  <script>
 
 
       $('form').on('submit', function(e) {
@@ -76,7 +86,7 @@
         }
       });
 
-    </script>-->
+    </script>
 
   <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
@@ -126,7 +136,7 @@
 
   </script>
 
-  <div class="alert alert-danger">
+  <!--<div class="alert alert-danger">
 
     <span id="sec">5</span>초 남았다
 
@@ -145,7 +155,7 @@
       }
     }, 1000);
 
-  </script>
+  </script>-->
 
 
   <ul class="list-group">
@@ -193,7 +203,7 @@
 
   </script>
 
-  <div style="height: 1000px;"> </div>
+  <div style="height: 10px;"> </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
