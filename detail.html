@@ -25,9 +25,9 @@
   </div> 
   
   <script>
-    var car2 = { name : '소나타', price : 50000 }
-    document.getElementById('1').innerHTML = car2['name'];
-    document.getElementById('2').innerHTML = car2['price'];
+    var car2 = { name : '소나타', price : [50000, 4000, 3000] }
+    document.getElementById('2').innerHTML = car2.price[0];
+    console.log(car2.price[0])
   </script>
 
     <style>
