@@ -31,18 +31,25 @@
 
   <script>
 
+    var pants = [28, 30, 32, 34];
+    var shirt = [95, 100, 105];
+
     $('.form-select').on('input', function(){
       var value = this.value;
         if(value == '셔츠') {
           $('.form-select').eq(1).removeClass('form-hide');
           $('.form-select').eq(1).html('')
-          var shirt = "<option>95</option> <option>100</option> <option>105</option>"
-            $('.form-select').eq(1).append(shirt)
+          
+          shirt.forEach(function(b) {
+            $('.form-select').eq(1).append(`<option>${b}</option>`)
+          })
       } else if (value == '바지') {
         $('.form-select').eq(1).removeClass('form-hide');
         $('.form-select').eq(1).html('')
-          var tem = "<option>28</option> <option>30</option> <option>32</option>"
-            $('.form-select').eq(1).append(tem)
+        
+        pants.forEach(function(a) {
+          $('.form-select').eq(1).append(`<option>${a}</option>`)
+        })
       } else if(value == '모자') {
           $('.form-select').eq(1).addClass('form-hide');
       }
