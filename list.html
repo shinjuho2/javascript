@@ -36,12 +36,42 @@
     </div>
   </div>
 
+  <div class="container my-4">
+    <button class="btn btn-danger price">가격순정렬</button>
+  </div>
+
   <script>
     var products = [
       { id: 0, price: 70000, title: 'Blossom Dress' },
       { id: 1, price: 50000, title: 'Springfield Shirt' },
       { id: 2, price: 60000, title: 'Black Monastery' }
     ];
+
+    $('.price').on('click', function() {
+      products.sort(function(a, b) {
+        return a.price - b.price;
+      });
+
+      $('.row').html('');
+
+      products.forEach(function (a) {
+      var 템플릿 =
+        `<div class="col-sm-4">
+        <img src="https://via.placeholder.com/600" class="w-100">
+        <h5>${a.title}</h5>
+        <p>가격 : ${a.price}</p>
+      </div>`;
+      $('.row').append(템플릿)
+    });
+
+    })
+
+    /*var array = ['a', 'c', 'b'];
+    array.sort(function(a, b) {
+      return b - a;
+    })
+    console.log(array)
+    */
 
     products.forEach(function (a) {
       var 템플릿 =
