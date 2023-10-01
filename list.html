@@ -72,6 +72,14 @@
 
     })
 
+    //일반함수
+var newProduct = products.filter(function(a){
+  return a.price <= 60000
+}); 
+
+//화살표함수
+var newProduct = products.filter(a => a.price <= 60000);
+
     /*var array = ['a', 'c', 'b'];
     array.sort(function(a, b) {
       return b - a;
